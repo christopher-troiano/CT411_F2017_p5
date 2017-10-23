@@ -12,4 +12,4 @@ https://christopher-troiano.github.io/CT411_F2017_p5/Troiano_Week5_HW/
 
 https://christopher-troiano.github.io/CT411_F2017_p5/Troiano_Week6_HW/
 
-https://christopher-troiano.github.io/CT411_F2017_p5/Troiano_Week8_Soundboard
+https://christopher-troiano.github.io/CT411_F2017_p5/Troiano_Week8_Soundboard/
