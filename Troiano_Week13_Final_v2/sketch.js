@@ -47,6 +47,10 @@ function preload(){
     pauseBut = loadImage("pause.png");
     nextBut = loadImage("next.png");
     backBut = loadImage("back.png");
+    
+    playhover = loadImage("play_hover.png");
+    nexthover = loadImage("next_hover.png");
+    backhover = loadImage("back_hover.png");
 
 }
 
@@ -95,17 +99,34 @@ function draw(){
     
     console.log(vol);
     
-//    image(playBut,1087,680,btn.x,btn.y);
+    image(playBut,1087,680,btn.x,btn.y);
     image(nextBut,1182,690,btn.x,btn.y);
     image(backBut,1013,690,btn.x,btn.y);
     
+    
+    //         play BUTTON HOVER
+    if (mouseX > 1087 && mouseX < 1087+77 && mouseY > 680 && mouseY < 680+77){
+        image(playhover,1087,680,btn.x,btn.y);
+    }
+    
+//    NEXT BUTTON Hover
+    if (mouseX > 1182 && mouseX < 1182+btn.w && mouseY > 690 && mouseY < 690+btn.h){
+        image(nexthover,1182,690,btn.x,btn.y);
+    }
+//        Back button hover
+    if (mouseX > 1013 && mouseX < 1013+btn.w && mouseY > 690 && mouseY < 690+btn.h){
+        image(backhover,1013,690,btn.x,btn.y);
+    
+    
 }
+}
+    
 
 function mousePressed(){
     
     
 //    NEXT BUTTON
-    if (mouseX > 1182 && mouseX < 1182+btn.w && mouseY > 690 && mouseY < 690+btn.h){
+    if (mouseX > 1182 && mouseX < 1182+btn.w && mouseY > 690 && mouseY < 690+btn.h || mouseX > 1087 && mouseX < 1087+77 && mouseY > 680 && mouseY < 680+77){
         
          //    music CHANGING IFS
        
@@ -171,49 +192,6 @@ function mousePressed(){
             backdrop.music= backdrop.music=0;
         }
        
-        
-    }
-
-//    //    play BUTTON
-//    if (mouseX > 1087 && mouseX < 1087+77 && mouseY > 680 && mouseY < 680+77){
-//        
-//        
-//         //    music CHANGING IFS
-//       
-//    if(backdrop.music == 0){
-//        songs[0].play();
-//            songs[0].stop();
-//        
-//        }else if(backdrop.music == 1){
-//            songs[2].stop();
-//        songs[0].play();
-//            
-//     
-//        }else if(backdrop.music==3){
-////        songs[1].play(); 
-//        songs[1].stop();    
-//    
-//        }else if(backdrop.music==3){
-//        songs[2].play(); 
-//        songs[1].stop();
-//        }
-//        
-//        if(backdrop.pic < 1){
-//        backdrop.pic= backdrop.pic + 1;
-//        }else{
-//            backdrop.pic= backdrop.pic=0;
-//        }
-//        
-//          if(backdrop.music < 2){
-//        backdrop.music= backdrop.music + 1;
-//        }else{
-//            backdrop.music= backdrop.music=0;
-//        }
-       
-        
-//    }
-
     
-    
-    
+}
 }
